@@ -16,7 +16,6 @@ namespace Exercicio_01
             int result = 0;
             string[] id = {};
             id = new string[10];
-            id = new string[] {name + " " + sobrenome};
             
 
             Console.WriteLine($"Olá por gentileza digite seu Primeiro Nome: \n");
@@ -28,6 +27,7 @@ namespace Exercicio_01
 
             while (sair == false)
                 {
+                    id = new string[] {name + " " + sobrenome};
                     if (id [0] != "Vinicius Cazuza")
                     {
                         Console.WriteLine($"\nNome registrado com sucesso!\n\n {id[0]} Seja Bem-Vindo(a) ao nosso Sistema!");
@@ -58,7 +58,7 @@ namespace Exercicio_01
                 }
                     if (sair == true && responsive != "n")
                         {
-                        Console.WriteLine($"\n {id}, seu cadastro foi feito, parabens!\n");
+                        Console.WriteLine($"\n {name}, seu cadastro foi feito, parabens!\n");
                          responsive = "!";
                         }
                             else 

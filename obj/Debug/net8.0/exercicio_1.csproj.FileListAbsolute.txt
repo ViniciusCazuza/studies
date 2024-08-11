@@ -102,3 +102,4 @@ C:\Users\ELAINE HEYEK\Desktop\Exercism\exercicio_1\bin\Debug\net8.0\zh-Hant\Aspi
 C:\Users\ELAINE HEYEK\Desktop\Exercism\exercicio_1\obj\Debug\net8.0\exercici.DD00FB37.Up2Date
 C:\Users\ELAINE HEYEK\Desktop\Exercism\exercicio_1\obj\Debug\net8.0\exercicio_1.genruntimeconfig.cache
 C:\Users\ELAINE HEYEK\Desktop\Exercism\exercicio_1\obj\Debug\net8.0\ref\exercicio_1.dll
+C:\Users\ELAINE HEYEK\Desktop\Exercism\exercicio_1\obj\Debug\net8.0\exercicio_1.sourcelink.json
