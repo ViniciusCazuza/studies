@@ -30,7 +30,7 @@ namespace Exercicio_01
                 {
                     if (id [0] != "Vinicius Cazuza")
                     {
-                        Console.WriteLine($"\nNome registrado com sucesso!\n\n {id} Seja Bem-Vindo(a) ao nosso Sistema!");
+                        Console.WriteLine($"\nNome registrado com sucesso!\n\n {id[0]} Seja Bem-Vindo(a) ao nosso Sistema!");
                         sair = true;
                     }
                         else 
