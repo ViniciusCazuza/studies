@@ -10,7 +10,7 @@ namespace Exercicio_01
     {
         public static void Main(string[] args)
         {
-            string name = "Vinicius", sobrenome = "Cazuza", responsive = "null";
+            string name = "Vinicius", sobrenome = "Cazuza", responsive = "null", operacao = ""; 
             bool sair = false;
             int imparPar = 0;
             int result = 0;
@@ -63,7 +63,7 @@ namespace Exercicio_01
                         }
                             else 
                             {
-                            Console.WriteLine($"\nOk, o seu cadastro termina aqui! Bye Bye!!");
+                            Console.WriteLine($"\nOk, o seu cadastro termina aqui!\n");
                             }
                             
         while (responsive == "s" || responsive == "!")
@@ -85,6 +85,52 @@ namespace Exercicio_01
                 Console.WriteLine($"\nDeseja digitar outro número {name} ?\n(s) Sim\n(n) Não\n");
                 responsive = Console.ReadLine ();
             }
+        while (responsive == "n" )
+            { 
+                Console.WriteLine($"\nAgora {name}, vamos fazer uma taboada, Let's Go ?! \n");
+                Console.WriteLine($"Me diga o de qual operacao voce gostaria de fazer:\n(+) Adicao \n(*) Multiplicacao \n(/) Divisao\n");
+                operacao = Console.ReadLine();
+                int cont = 1, resultado, valor;
+
+                    if (operacao == "+")
+                    {
+                        Console.WriteLine($"\n{name}Ok!! Voce escolheu Adicao, incrivel\n Agora me diga, qual numero gostaria de Taboar ??\n");
+                        valor = int.Parse(Console.ReadLine());
+
+                        while (cont < 10)
+                        {
+                            resultado = (cont + valor);
+                            Console.WriteLine(cont + " + " + valor + " = " + resultado);
+                            cont++;
+                        }
+
+                        Console.WriteLine($"\nGostaria de parar ??\n(s) Sim\n(n) Não\n");
+                        responsive = Console.ReadLine();
+                    }
+                    else if (operacao == "*")
+                        {
+                            Console.WriteLine($"\nOk {name}!! Voce escolheu Multiplicacao, incrivel\n Agora me diga, qual numero gostaria de Taboar ??\n");
+                            valor = int.Parse(Console.ReadLine());
+
+                            while (cont < 10)
+                            {
+                                resultado = (cont * valor);
+                                Console.WriteLine(cont + " * " + valor + " = " + resultado);
+                                cont++;
+                        
+                            }
+
+                            Console.WriteLine($"\nGostaria de parar ??\n(s) Sim\n(n) Não\n");
+                            responsive = Console.ReadLine();                           
+                        }
+                    else
+                        {
+                            Console.WriteLine($"\n{name} Nao entendi a sua resposta, acho que errou a Tecla\n Gostaria de parar agora? \n(s) Sim\n(n) Não\n");
+                            responsive = Console.ReadLine();
+                        }
+            }
+
+            Console.WriteLine($"\nMuito obrigado pelo tempo juntos, volte sempre!!\n");
                 
         }
     }
