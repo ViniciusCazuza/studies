@@ -18,9 +18,10 @@ namespace Exercicio_01
             id = new string[10];
             
 
-            Console.WriteLine($"Olá por gentileza digite seu Primeiro Nome: \n");
+            Console.WriteLine($"\nTem um tal de Vinicius Cazuza que não pode entrar nesse Sistema, caso seu nome seja esse nem tente!\nCaso Contrario seja bem-Vindo(a) \n");
+            Console.WriteLine($"\nOlá por gentileza digite seu Primeiro Nome: \n");
             name = Console.ReadLine();
-            Console.WriteLine($"Agora digite seu Segundo Nome: \n");
+            Console.WriteLine($"\nAgora digite seu Segundo Nome: \n");
             sobrenome = Console.ReadLine();
 
 
@@ -30,7 +31,7 @@ namespace Exercicio_01
                     id = new string[] {name + " " + sobrenome};
                     if (id [0] != "Vinicius Cazuza")
                     {
-                        Console.WriteLine($"\nNome registrado com sucesso!\n\n {id[0]} Seja Bem-Vindo(a) ao nosso Sistema!");
+                        Console.WriteLine($"\n\n\n {id[0]} Seja Bem-Vindo(a) ao nosso Sistema!");
                         sair = true;
                     }
                         else 
@@ -88,7 +89,7 @@ namespace Exercicio_01
         while (responsive == "n" )
             { 
                 Console.WriteLine($"\nAgora {name}, vamos fazer uma taboada, Let's Go ?! \n");
-                Console.WriteLine($"Me diga o de qual operacao voce gostaria de fazer:\n(+) Adicao \n(*) Multiplicacao \n(/) Divisao\n");
+                Console.WriteLine($"Me diga o de qual operacao voce gostaria de fazer:\n(*) Multiplicacao \n");
                 operacao = Console.ReadLine();
                 int cont = 1, resultado, valor;
 
