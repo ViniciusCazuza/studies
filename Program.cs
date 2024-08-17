@@ -25,7 +25,7 @@ namespace Exercicio_01
 
 
 
-            /*while (sair == false)
+            while (sair == false)
                 {
                     id = new string[] {name + " " + sobrenome};
                     if (id [0] != "Vinicius Cazuza" )
@@ -83,7 +83,7 @@ namespace Exercicio_01
                 }
                     if (sair == true && responsive != "n" && responsive != "null")
                         {
-                        Console.WriteLine($"\n {name}, seu cadastro foi feito, parabens!\n");
+                        Console.WriteLine($"\n{name}, seu cadastro foi feito, parabens!\n");
                          responsive = "!";
                         }
                         
@@ -147,7 +147,7 @@ namespace Exercicio_01
                         }
                     else
                         {
-                            Console.WriteLine($"\n{name} Nao entendi a sua resposta, acho que errou a Tecla\n Gostaria de parar agora? \n(s) Sim\n(n) Não\n");
+                            Console.WriteLine($"\n{name} Não entendi a sua resposta, acho que errou a Tecla\n Gostaria de parar agora? \n(s) Sim\n(n) Não\n");
                             responsive = Console.ReadLine();
                         }
             }
@@ -238,13 +238,13 @@ namespace Exercicio_01
                             Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
                             responsive = (Console.ReadLine()+"Novo");
                         }
-                    }*/
-            {
+                    }
+            }
             Console.WriteLine($"\nOk {name}, agora tenho mais uma função legal, quer saber se algum núnemro é primo ou não ? \n(s) Sim \n(n) Não\n\n");
             responsive = Console.ReadLine();
 
-             while(responsive == "s" || responsive != "n" && responsive != "null")
-             {  
+            while(responsive == "s" || responsive != "n" && responsive != "null")
+            {  
                 int cont = 0, numPrimo, resto;
 
                 Console.WriteLine($"\nDigite o número que deseja saber: \n");
@@ -270,11 +270,8 @@ namespace Exercicio_01
                  Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
                             responsive = (Console.ReadLine());
 
-             }
-            
             }
-
-
+            
             Console.WriteLine($"\nMuito obrigado pelo tempo juntos, volte sempre!!\n");
                 
         }
