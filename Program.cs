@@ -12,8 +12,7 @@ namespace Exercicio_01
         {
             string name = "Vinicius", sobrenome = "Cazuza", responsive = "null", operacao = ""; 
             bool sair = false;
-            int imparPar = 0;
-            int result = 0;
+            int imparPar = 0, idade = 0, result = 0;
             string[] id = {};
             id = new string[10];
             
@@ -29,14 +28,39 @@ namespace Exercicio_01
             while (sair == false)
                 {
                     id = new string[] {name + " " + sobrenome};
-                    if (id [0] != "Vinicius Cazuza")
+                    if (id [0] != "Vinicius Cazuza" )
                     {
+                        
+                        if (idade == 0 )
+                        {
+                            Console.WriteLine($"\nAgora quantos anos você tem ?: \n");
+                        idade = int.Parse(Console.ReadLine());
+                        }
+                        if (idade >= 18){
                         Console.WriteLine($"\n\n\n {id[0]} Seja Bem-Vindo(a) ao nosso Sistema!");
                         sair = true;
+                        responsive = "s";
+                        }
+                        else
+                        {   
+
+                                Console.WriteLine($"\nVerificamos que você não tem idade para entrar nesse Sistema! \n\n Deseja corrigir a sua idade ? \n(s) Sim \n(n) Não\n");
+                                responsive = Console.ReadLine();
+                                    if (responsive == "s")
+                                    {
+                                    Console.WriteLine($"\nOk por gentileza, digite sua idade novamente:");
+                                    idade = int.Parse(Console.ReadLine());
+                                    }
+                                    else
+                                    {
+                                        sair = true;
+                                        responsive = "null";
+                                    }
+                        }
                     }
-                        else 
+                    else 
                         {
-                            Console.WriteLine($"\nVerificamos que já existe esse nome em nosso Banco de Dados! \n\n Deseja inserir outro username ? \n(s) Sim \n(n) Não\n");
+                            Console.WriteLine($"\nVerificamos que você esta BANIDO desse Sistema! \n\n Deseja inserir outro Nome e Sobrenome ? \n(s) Sim \n(n) Não\n");
                             responsive = Console.ReadLine();
                                 if (responsive == "s")
                                 {
@@ -57,17 +81,14 @@ namespace Exercicio_01
                         
                         }
                 }
-                    if (sair == true && responsive != "n")
+                    if (sair == true && responsive != "n" && responsive != "null")
                         {
                         Console.WriteLine($"\n {name}, seu cadastro foi feito, parabens!\n");
                          responsive = "!";
                         }
-                            else 
-                            {
-                            Console.WriteLine($"\nOk, o seu cadastro termina aqui!\n");
-                            }
+                        
                             
-        while (responsive == "s" || responsive == "!")
+        while (responsive == "s" || responsive == "!" && responsive != "null")
             { 
                 Console.WriteLine($"Agora {name}, vamos fazer uma coisa bem legal, me diga um numero qualquer e eu irei te dizer se é Impar ou Par, Let's Go ?! \n");
                 imparPar = int.Parse(Console.ReadLine());
@@ -86,7 +107,7 @@ namespace Exercicio_01
                 Console.WriteLine($"\nDeseja digitar outro número {name} ?\n(s) Sim\n(n) Não\n");
                 responsive = Console.ReadLine ();
             }
-        while (responsive == "n" )
+        while (responsive == "n" && responsive != "null" )
             { 
                 Console.WriteLine($"\nAgora {name}, vamos fazer uma taboada, Let's Go ?! \n");
                 Console.WriteLine($"Me diga o de qual operacao voce gostaria de fazer:\n(*) Multiplicacao \n");
@@ -130,6 +151,96 @@ namespace Exercicio_01
                             responsive = Console.ReadLine();
                         }
             }
+
+            while(responsive == "s" || responsive == "sNovo" && responsive != "null")
+            {
+                if (responsive != "sNovo") 
+                {
+                    Console.WriteLine($"\n\nAgora que tal uma brincadeirinha ? \n(s) Sim\n(n) Não\n");
+                responsive = Console.ReadLine();
+                }
+                if (responsive != "n")
+                {
+                Console.WriteLine($"\n\nJá jogou Pedra, Papel e Tesoura ? Let's Go \n(P)Pedra \n(p)Papel \n(t)Tesoura \n\n");
+                    
+                string jokenPow = Console.ReadLine();
+
+                int advNumber, jokenPowNumber;
+
+                        Random adv = new Random();
+                        advNumber = adv.Next(3);
+
+
+                    if ( jokenPow == "P")
+                    {
+                        jokenPowNumber = 1;
+
+                            if ( jokenPowNumber > advNumber )
+                            {
+                                Console.WriteLine($"\nVocê escolheu Pedra!! \nE eu coloquei Tesoura! =( \n\nParabens você ganhou!!");
+                            }
+                            
+                            if ( jokenPowNumber == advNumber )
+                            {
+                                Console.WriteLine($"\nVocê escolheu Pedra!! \nE eu coloquei Pedra! =D \n\nEmpatamos!!");
+                            }
+                            
+                            if ( jokenPowNumber < advNumber )
+                            {
+                                Console.WriteLine($"\nVocê escolheu Pedra!! \nE eu coloquei Papel ! ;) \n\nAcho que eu ganheeei!!");
+                            }
+
+                            Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
+                            responsive = (Console.ReadLine()+"Novo");       
+                            
+                    }
+                    if ( jokenPow == "p")
+                    {
+                        jokenPowNumber = 2;
+
+                            if ( advNumber == 1 )
+                            {
+                                Console.WriteLine($"\nVocê escolheu Papel!! \nE eu coloquei Pedra! =( \n\nParabens você ganhou!!");
+                            }
+                            
+                            if ( jokenPowNumber == advNumber )
+                            {
+                                Console.WriteLine($"\nVocê escolheu Papel!! \nE eu coloquei Papel! =D \n\nEmpatamos!!");
+                            }
+                            
+                            if ( advNumber == 0)
+                            {
+                                Console.WriteLine($"\nVocê escolheu Papel!! \nE eu coloquei Tesoura ! ;) \n\nAcho que eu ganheeei!!");
+                            }
+
+                            Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
+                            responsive = (Console.ReadLine()+"Novo");
+                    }
+                    if ( jokenPow == "t")
+                    {
+                        jokenPowNumber = 0;
+
+                            if ( advNumber == 2)
+                            {
+                                Console.WriteLine($"\nVocê escolheu Tesoura!! \nE eu coloquei Papel! =( \n\nParabens você ganhou!!");
+                            }
+                            
+                            if ( jokenPowNumber == advNumber )
+                            {
+                                Console.WriteLine($"\nVocê escolheu Tesoura!! \nE eu coloquei Tesoura! =D \n\nEmpatamos!!");
+                            }
+                            
+                            if ( advNumber == 1)
+                            {
+                                Console.WriteLine($"\nVocê escoleu Tesoura!! \nE eu coloquei Pedra ! ;) \n\nAcho que eu ganheeei!!");
+                            }
+                            
+                            Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
+                            responsive = (Console.ReadLine()+"Novo");
+                        }
+                    }
+            }
+
 
             Console.WriteLine($"\nMuito obrigado pelo tempo juntos, volte sempre!!\n");
                 
