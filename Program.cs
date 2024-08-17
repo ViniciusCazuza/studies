@@ -25,7 +25,7 @@ namespace Exercicio_01
 
 
 
-            while (sair == false)
+            /*while (sair == false)
                 {
                     id = new string[] {name + " " + sobrenome};
                     if (id [0] != "Vinicius Cazuza" )
@@ -238,7 +238,40 @@ namespace Exercicio_01
                             Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
                             responsive = (Console.ReadLine()+"Novo");
                         }
+                    }*/
+            {
+            Console.WriteLine($"\nOk {name}, agora tenho mais uma função legal, quer saber se algum núnemro é primo ou não ? \n(s) Sim \n(n) Não\n\n");
+            responsive = Console.ReadLine();
+
+             while(responsive == "s" || responsive != "n" && responsive != "null")
+             {  
+                int cont = 0, numPrimo, resto;
+
+                Console.WriteLine($"\nDigite o número que deseja saber: \n");
+                numPrimo = int.Parse(Console.ReadLine());
+                
+                for ( int x = 1; x <= numPrimo; x++ )
+                {
+                resto = (numPrimo % x);
+                    if (resto == 0)
+                    {
+                        cont = cont + 1;
                     }
+                }
+                    if (cont == 2)
+                    {
+                    Console.WriteLine($"Seu núnemro é Primo!! \n\n");
+                    }
+                        else 
+                        {
+                        Console.WriteLine($"Seu núnemro não é Primo! \n\n");
+                        }
+                    
+                 Console.WriteLine($"\nGostaria de CONTINUAR ??\n(s) Sim\n(n) Não\n");
+                            responsive = (Console.ReadLine());
+
+             }
+            
             }
 
 
